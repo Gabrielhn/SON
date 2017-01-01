@@ -1,0 +1,77 @@
+/// gIT ///
+
+#1
+Configurações de nome para commits:
+
+-Nome
+> git config --global user.name "Gabriel Hipolito"
+
+-Email
+> git config --global user.email "pcc_,gabriel@hotmail.com"
+
+-Cores ON
+> git config --global color.ui true
+
+
+
+#2
+Comandos PS (git):
+
+-Cria diretórios
+> mkdir
+
+-Lista diretórios
+> dir
+
+-Cria arquivo
+> touch %nomearquivo%.txt
+
+-Editor
+> vim %nomearquivo%.txt
+ESC :wq! -> Exit salvando
+ESC :q! -> Exit
+ESC :r! -> Salva
+
+-Criando repositório
+> git init (já dentro da pasta que deseja criar)
+
+-Status do repositório [Estágios= untracked > tracked > commit]
+> git status
+
+-Adicionar ao "track" (Changes to be commited)
+> git add %nomearquivo%.txt
+
+-Commit
+> git commit -m "Mensagem do commit"
+> git commit [Dessa forma podem ser colocada uma mensagem de commit mais elaborada. Será aberto o editor de textos padrão.]
+> git commit -a [todos os arquivos]
+
+-Log dos commits
+> git log
+> git log -p [diff entre os arquivos nos commits]
+> git log -p -3 [diff entre os arquivos dos ultimos 3 commits]
+> git log --stat [modificaÃ§Ãµes feitas nos arquivos nos commits]
+
+-Ignorando arquivos
+*Criar arquivo ".gitignore", listando em cada linha o nome dos arquivos a serem ignorados.
+
+-Removendo arquivos do branch
+> git rm %nomearquiv%.txt [necessario commit]
+
+-Unchecking, Untrack
+> git reset HEAD %nomearquivo%.txt
+
+-Branch
+> git checkout -b %NovoBranch% [Criando novo branch apartir do branch atual]
+> git checkout %NomeBranch% [trocando de branch]
+> git merge %NomeBranch% [Merge entre os branchs(atual pega o ultimo do indicado)]
+
+-Remote (Github)
+> git remote add %nomeremote% %linkremote%
+
+-Push (publicar)
+> git push %nomeremote% %branch% (ex: git push web master)
+
+-Pull (buscar, download from remote)
+> git pull %nomeremote% %branch% (git pull web master)
+
